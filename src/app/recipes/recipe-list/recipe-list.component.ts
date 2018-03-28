@@ -14,6 +14,11 @@ export class RecipeListComponent implements OnInit {
       'Pancakes',
       'Tasty pancakes',
       'https://upload.wikimedia.org/wikipedia/commons/a/aa/Blueberry_pancakes_%281%29.jpg'
+    ),
+    new Recipe(
+      'Donuts',
+      'Tasty donuts',
+      'https://upload.wikimedia.org/wikipedia/commons/1/1c/Donuts.jpg'
     )
   ];
 
