@@ -1,6 +1,6 @@
 {
   "name": "angular-recipes",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -45,5 +45,24 @@
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
     "typescript": "~2.5.3"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MateuszKita/angular-recipes.git"
+  },
+  "keywords": [
+    "angular",
+    "recipes",
+    "mateusz",
+    "kita",
+    "mateusz",
+    "kita"
+  ],
+  "author": "Mateusz Kita",
+  "bugs": {
+    "url": "https://github.com/MateuszKita/angular-recipes/issues"
+  },
+  "homepage": "https://github.com/MateuszKita/angular-recipes#readme"
 }
