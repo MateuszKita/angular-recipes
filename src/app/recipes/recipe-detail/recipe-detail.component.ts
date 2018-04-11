@@ -1,7 +1,7 @@
 import { RecipeBookService } from './../../shared/recipe-book.service';
 import { Component, OnInit } from '@angular/core';
 import { Recipe } from '../../shared/recipe.model';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -14,13 +14,15 @@ export class RecipeDetailComponent implements OnInit {
 
   constructor(
     private recipeBookService: RecipeBookService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit() {
     // const id = this.route.snapshot.params['id'];
     this.route.params.subscribe((params: Params) => {
       this.id = +params['id'];
+      console.log(this.id);
       this.recipe = this.recipeBookService.getRecipe(this.id);
     });
   }
@@ -29,5 +31,9 @@ export class RecipeDetailComponent implements OnInit {
     this.recipeBookService.addIngredientsToShoppingList(
       this.recipe.ingredients
     );
+  }
+
+  onEditRecipe() {
+    this.router.navigate(['edit'], { relativeTo: this.route });
   }
 }
