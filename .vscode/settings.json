@@ -1,4 +1,6 @@
 {
   "prettier.singleQuote": true,
-  "html.format.wrapAttributes": "force-aligned"
+  "html.format.wrapAttributes": "force-aligned",
+  "prettier.semi": true,
+  "autoimport.useSemiColon": true
 }
