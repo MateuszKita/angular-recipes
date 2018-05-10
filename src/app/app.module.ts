@@ -1,3 +1,8 @@
+import { HttpModule } from '@angular/http';
+import {
+  FormsModule,
+  ReactiveFormsModule
+} from '@angular/forms';
 import { ShoppingListService } from './shared/shopping-list.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -30,7 +35,13 @@ import { RecipeBookService } from './shared/recipe-book.service';
     RecipeStartComponent,
     RecipeEditComponent
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpModule,
+    ReactiveFormsModule
+  ],
   providers: [ShoppingListService, RecipeBookService],
   bootstrap: [AppComponent]
 })
