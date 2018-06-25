@@ -2,8 +2,8 @@ import { Ingredient } from './ingredient.model';
 import { Subject } from 'rxjs/Subject';
 
 export class ShoppingListService {
-  ingredientsChanged = new Subject<Ingredient[]>();
-  constructor() {}
+  public ingredientsChanged = new Subject<Ingredient[]>();
+  public editingStarted = new Subject<number>();
 
   private ingredients: Ingredient[] = [
     new Ingredient('Eggs', 2),
@@ -21,9 +21,6 @@ export class ShoppingListService {
   }
 
   addIngredients(ingredients: Ingredient[]) {
-    // for (const ingredient of ingredients) {
-    //   this.addIngredient(ingredient);
-    // }
     this.ingredients.push(...ingredients);
     this.ingredientsChanged.next(this.ingredients.slice());
   }
