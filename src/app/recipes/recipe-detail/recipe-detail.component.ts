@@ -23,7 +23,6 @@ export class RecipeDetailComponent implements OnInit {
     // const id = this.route.snapshot.params['id'];
     this.route.params.subscribe((params: Params) => {
       this.id = +params['id'];
-      console.log(this.id);
       this.recipe = this.recipeBookService.getRecipe(this.id);
     });
   }
